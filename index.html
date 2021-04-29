@@ -14,41 +14,74 @@
   </head>
   <body>
     <div class="container">
-      <div class="fixed-action-btn one">
-        <a class="btn-floating btn-large red">
-          <i class="large material-icons">mode_edit</i>
-        </a>
-        <ul>
-          <li>
-            <a class="btn-floating red"
-              ><i class="material-icons">insert_chart</i></a
-            >
-          </li>
-          <li>
-            <a class="btn-floating yellow darken-1"
-              ><i class="material-icons">format_quote</i></a
-            >
-          </li>
-          <li>
-            <a class="btn-floating green"
-              ><i class="material-icons">publish</i></a
-            >
-          </li>
-          <li>
-            <a class="btn-floating blue"
-              ><i class="material-icons">attach_file</i></a
-            >
-          </li>
-        </ul>
-      </div>
+      <nav style="margin-bottom: 50px">
+        <div class="nav-wrapper">
+          <a class="brand-logo"><img src="../logo-primary.svg" /></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <nav style="margin-bottom: 50px">
+        <div class="nav-wrapper indigo">
+          <a class="brand-logo"><img src="../logo-primary.svg" /></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Contact</a></li>
+            <li>
+              <a class="dropdown-button" data-activates="dropdown1"
+                >Dropdown<i class="large material-icons">
+                  arrow_drop_down
+                </i></a
+              >
+            </li>
+            <li>
+              <ul id="dropdown1" class="dropdown-content">
+                <li><a href="#!">one</a></li>
+                <li><a href="#!">two</a></li>
+                <li class="divider" tabindex="-1"></li>
+                <li><a href="#!">three</a></li>
+                <li>
+                  <a href="#!"><i class="material-icons">view_module</i>four</a>
+                </li>
+                <li>
+                  <a href="#!"><i class="material-icons">cloud</i>five</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a class="btn">Login</a>
+            </li>
+            <li>
+              <a><i class="material-icons">account_circle</i></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <nav style="margin-bottom: 50px">
+        <div class="nav-wrapper black">
+          <a class="brand-logo"><img src="../logo-primary.svg" /></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <nav style="margin-bottom: 50px">
+        <div class="nav-wrapper green">
+          <a><i class="material-icons">search</i></a>
+        </div>
+      </nav>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        var elems = document.querySelectorAll('.fixed-action-btn');
-        var instances = M.FloatingActionButton.init(elems, {
-          direction: 'left',
-        });
+        var elems = document.querySelectorAll('.dropdown-trigger');
+        var instances = M.Dropdown.init(elems, options);
       });
     </script>
   </body>
