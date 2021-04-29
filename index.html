@@ -14,51 +14,42 @@
   </head>
   <body>
     <div class="container">
-      <a class="btn">READ MORE</a>
-      <a class="btn">READ MORE</a>
-      <a class="btn">READ MORE</a>
-      <a class="btn">READ MORE</a>
-      <a class="white red-text btn">READ MORE</a>
-      <a class="white teal-text btn">READ MORE</a>
-      <a class="white green-text btn">READ MORE</a>
-      <a class="white grey-text btn">READ MORE</a>
-      <a class="white purple-text btn">READ MORE</a>
-      <div>
-        <i class="Small material-icons">account_circle</i>
-        <i class="blue-text Small material-icons">search</i>
-        <i class="red-text Small material-icons">settings</i>
-        <i class="Small material-icons">add_location</i>
-      </div>
-      <div>
-        <i class="large material-icons">check</i>
-        <i class="medium material-icons">check</i>
-        <i class="small material-icons">check</i>
-        <i class="tiny material-icons">check</i>
-      </div>
-      <div style="margin-top: 20px">
-        <a class="btn"
-          ><i class="small material-icons">local_grocery_store</i>buy now</a
-        >
-        <a class="btn"
-          >buy now<i class="small material-icons">local_grocery_store</i></a
-        >
-        <a class="btn"
-          ><i class="small material-icons">local_grocery_store</i>buy now</a
-        >
-        <a class="btn red">read more</a>
-        <a class="btn purple">red more</a>
-        <a class="btn amber">read more</a>
-        <a class="btn">read more</a>
-        <a class="btn black">read more</a>
-        <a class="btn yellow">read more</a>
-      </div>
-      <div style="margin-top: 20px">
-        <a class="btn-large">large button</a>
-        <a class="btn-large grey lighten-2 grey-text" style="margin-left: 2px"
-          >large button</a
-        >
+      <div class="fixed-action-btn">
+        <a class="btn-floating btn-large red">
+          <i class="large material-icons">mode_edit</i>
+        </a>
+        <ul>
+          <li>
+            <a class="btn-floating red"
+              ><i class="material-icons">insert_chart</i></a
+            >
+          </li>
+          <li>
+            <a class="btn-floating yellow darken-1"
+              ><i class="material-icons">format_quote</i></a
+            >
+          </li>
+          <li>
+            <a class="btn-floating green"
+              ><i class="material-icons">publish</i></a
+            >
+          </li>
+          <li>
+            <a class="btn-floating blue"
+              ><i class="material-icons">attach_file</i></a
+            >
+          </li>
+        </ul>
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.fixed-action-btn');
+        var instances = M.FloatingActionButton.init(elems, {
+          direction: 'left',
+        });
+      });
+    </script>
   </body>
 </html>
