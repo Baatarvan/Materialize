@@ -13,59 +13,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="chip">Web development</div>
-        <div class="chip">Web design</div>
-        <div class="chip">Programming</div>
-      </div>
-      <div class="row">
-        <div class="chip">
-          Web development
-          <i class="close material-icons">close</i>
-        </div>
-        <div class="chip">
-          Web design
-          <i class="close material-icons">close</i>
-        </div>
-      </div>
-      <div class="row">
-        <div class="chip">
-          <img
-            src="https://www.pngkey.com/png/full/157-1579943_no-profile-picture-round.png"
-            alt="Contact Person"
-          />
-          Jane Doe
-        </div>
-      </div>
-      <div class="row">
-        <div class="chips input-field">
-          <input class="input" id="f0ee754c-41d4-e751-f252-64c1957f1b56" />
-        </div>
-      </div>
-      <div class="row">
-        <ul class="pagination">
-          <li class="disabled">
-            <a href="#!"><i class="material-icons">chevron_left</i></a>
-          </li>
-          <li class="waves-effect"><a href="#!">1</a></li>
-          <li class="waves-effect active"><a href="#!">2</a></li>
-          <li class="waves-effect"><a href="#!">3</a></li>
-          <li class="waves-effect"><a href="#!">4</a></li>
-          <li class="waves-effect"><a href="#!">5</a></li>
-          <li class="waves-effect">
-            <a href="#!"><i class="material-icons">chevron_right</i></a>
-          </li>
-        </ul>
-      </div>
+    <div class="carousel">
+      <a class="carousel-item" href="#one!"
+        ><img src="https://www.w3schools.com/html/pic_trulli.jpg"
+      /></a>
+      <a class="carousel-item" href="#one!"
+        ><img src="https://www.w3schools.com/html/pic_trulli.jpg"
+      /></a>
+      <a class="carousel-item" href="#one!"
+        ><img src="https://www.w3schools.com/html/pic_trulli.jpg"
+      /></a>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        var elems = document.querySelectorAll('.chips');
-        var instances = M.Chips.init(elems, () => {
-          return onChipAdd();
-        });
+        var elems = document.querySelectorAll('.carousel');
+        var instances = M.Carousel.init(elems, 100);
       });
     </script>
   </body>
