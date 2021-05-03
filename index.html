@@ -14,56 +14,60 @@
   </head>
   <body>
     <div class="container">
-      <nav style="margin-bottom: 20px">
-        <div class="nav-wrapper grey">
-          <div class="col s12">
-            <a href="#!" class="breadcrumb">Home</a>
-            <a href="#!" class="breadcrumb">User</a>
-            <a href="#!" class="breadcrumb">Brad</a>
-          </div>
-        </div>
-      </nav>
-      <footer class="page-footer grey darken-3">
-        <div class="container">
-          <div class="row">
-            <div class="col l6 s12">
-              <h5 class="white-text">About Us</h5>
-              <p class="white-text text-lighten-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Repellat commodi voluptatum voluptas obcaecati architecto aut
-                officiis animi nobis accusamus ex nesciunt
-              </p>
+      <div class="switch">
+        <label>
+          Off
+          <input type="checkbox" />
+          <span class="lever"></span>
+          On
+        </label>
+      </div>
+      <div class="switch">
+        <label>
+          Off
+          <input disabled type="checkbox" />
+          <span class="lever"></span>
+          On
+        </label>
+      </div>
+      <div class="row">
+        <form action="#">
+          <div class="file-field input-field">
+            <div class="btn">
+              <span>File</span>
+              <input type="file" />
             </div>
-            <div class="col l4 offset-l2 s12">
-              <h5 class="white-text">Links</h5>
-              <ul>
-                <li>
-                  <a class="grey-text text-lighten-3" href="#!">Link 1</a>
-                </li>
-                <li>
-                  <a class="grey-text text-lighten-3" href="#!">Link 2</a>
-                </li>
-                <li>
-                  <a class="grey-text text-lighten-3" href="#!">Link 3</a>
-                </li>
-                <li>
-                  <a class="grey-text text-lighten-3" href="#!">Link 4</a>
-                </li>
-              </ul>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text" />
             </div>
           </div>
-        </div>
-        <div class="footer-copyright grey dark-2">
-          <div class="container">
-            © Copyright 2018
-            <a class="grey-text text-lighten-4 right" href="#!"
-              >Terms & Conditions</a
-            >
-          </div>
-        </div>
-      </footer>
+        </form>
+      </div>
+      <div class="row">
+        <form action="#">
+          <p class="range-field">
+            <input type="range" id="test5" min="0" max="100" />
+          </p>
+        </form>
+      </div>
+      <div class="row">
+        <input type="text" class="datepicker" />
+      </div>
+      <div class="row">
+        <input type="text" class="timepicker" />
+      </div>
+      <submit><button class="btn">Submit</button></submit>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var date = document.querySelectorAll('.datepicker');
+        M.Datepicker.init(date, {});
+      });
+      document.addEventListener('DOMContentLoaded', function () {
+        var time = document.querySelectorAll('.timepicker');
+        M.Timepicker.init(time, {});
+      });
+    </script>
   </body>
 </html>
